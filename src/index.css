@@ -1,0 +1,15 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    nav{
+        display: flex;
+        gap: 20px;
+    }
+}
+
+.container{
+    max-width: 1440px;
+    
+}
