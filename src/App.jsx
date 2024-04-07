@@ -4,11 +4,15 @@ import Home from "./assets/pages/Home"
 import About from "./assets/pages/About"
 import Contact from "./assets/pages/Contact"
 import MainLayout from "./layout/MainLayout"
+import NotFound from "./assets/pages/NotFound"
+
+
 function App() {
 const routes = createBrowserRouter([
   {
     path:"/",
     element:<MainLayout/>,
+    errorElement: <NotFound/>,
     children: [
       {
         index:true,
@@ -24,8 +28,14 @@ const routes = createBrowserRouter([
       }
     ]
   },
+
+  {
+    path:"*",
+    element: <NotFound/>
+  }
  
 ])
+
   return (
     <div className="container">
 <RouterProvider router={routes}/>
